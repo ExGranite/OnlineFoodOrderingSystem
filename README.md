@@ -1,7 +1,6 @@
 # Mozart - ONLINE FOOD ORDERING SYSTEM
 
-This is a project done in completion to the Software Engineering course.
-The framework used is Laravel 8.0.
+This is a project done in completion to the Software Engineering course. <br> The framework used is Laravel 8.0.
 
 ### Source Code(s):
 
@@ -39,6 +38,7 @@ The framework used is Laravel 8.0.
     - Add Food Items
     - View Food Menu
     - Edit Food Items
+    - Delete Food Items
     - View Active Carts
     - View Active Orders
     - Edit Active Order Status
