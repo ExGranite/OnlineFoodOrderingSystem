@@ -29,22 +29,21 @@ This is a project done in completion to the Software Engineering course. <br> Th
     - Remove From Cart
     - Enter Payment Information
     - Confirm Order
-    - View Cart
-    - View Order
+    - View Carts
+    - View Orders
 - #### Admin Only
     - View Admin Dashboard (Contains generalized information about accounts, food menu, carts, and orders.)
     - View All User Accounts
-    - Delete A User Account (Cannot Delete Admin Accounts)
+    - Delete User Accounts (Cannot Delete Admin Accounts)
     - Add Food Items
-    - View Food Menu
+    - View Food Menu (from Admin Dashboard)
     - Edit Food Items
     - Delete Food Items
     - View Active Carts
     - View Active Orders
     - Edit Active Order Status
-    - View Completed Order
+    - View Completed Orders
 
 ### License
 
-Please use for education purposes only. It is alright to take inspirations, but please do not use the exact software for your projects/assignments.
-<br><br>© Copyright Ahmad Al Asad
+Please use for education purposes only. It is alright to take inspirations, but please do not use the exact software for your projects/assignments. <br> <br> © Copyright Ahmad Al Asad
