@@ -1,6 +1,6 @@
 # Mozart - ONLINE FOOD ORDERING SYSTEM
 
-This is a project done in completion to the Software Engineering course. <br> The framework used is Laravel 8.0.
+This is a project done in completion to the Software Engineering course. <br> The framework used is Laravel 8.0. <br> The main focus was on the software and how it works on the backend.
 
 ### Source Code(s):
 
@@ -16,22 +16,25 @@ This is a project done in completion to the Software Engineering course. <br> Th
 - [Responsive Table-less Shopping Cart](https://codepen.io/alex_rodrigues/pen/ABGdg)
 - [Credit Card Validation](https://codepen.io/hswd/full/JYvgBW)
 
-Snippets from the templates have been used, and modified accordingly. The entire template has not been used.
+Snippets from the templates have been used, and modified using css, javascript and added php. The entire template has not been used.
 
 ### Features:
 
 - #### Default
     - View Home Page
+    - Home Page Shows 6 Randomized Food Items (per Category) from the Database as Specials
     - View Menu
     - Login (Admin account is redirected to Admin Dashboard || User account is redirected to homepage)
     - Register
     - Logout (Redirected to homepage)
+    - Navbar Shows Orders and Carts only when Logged in
 - #### Customer Only
     - Add To Cart
     - Remove From Cart
     - Live Cart Count
     - Enter Payment Information
     - Confirm Order
+    - Checkout Button in Carts Page uses Dropdown to Show Payment Information Input Fields
     - View Carts
     - View Orders
 - #### Admin Only
