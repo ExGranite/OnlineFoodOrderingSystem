@@ -16,6 +16,8 @@ This is a project done in completion to the Software Engineering course. <br> Th
 - [Responsive Table-less Shopping Cart](https://codepen.io/alex_rodrigues/pen/ABGdg)
 - [Credit Card Validation](https://codepen.io/hswd/full/JYvgBW)
 
+Snippets from the templates have been used, and modified accordingly. The entire template has not been used.
+
 ### Features:
 
 - #### Default
@@ -23,10 +25,11 @@ This is a project done in completion to the Software Engineering course. <br> Th
     - View Menu
     - Login (Admin account is redirected to Admin Dashboard || User account is redirected to homepage)
     - Register
-    - Logout
+    - Logout (Redirected to homepage)
 - #### Customer Only
     - Add To Cart
     - Remove From Cart
+    - Live Cart Count
     - Enter Payment Information
     - Confirm Order
     - View Carts
