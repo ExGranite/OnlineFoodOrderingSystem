@@ -50,6 +50,60 @@ Snippets from the templates have been used, and modified using css, javascript a
     - Edit Active Order Status
     - View Completed Orders
 
+### Tests:
+
+- #### Feature (Provided by Laravel)
+    - View Home Page
+      - Home Page Shows 6 Randomized Food Items (per Category) from the Database as Specials
+    - View Menu
+    - Login (Admin account is redirected to Admin Dashboard || User account is redirected to homepage)
+    - Register
+    - Logout (Redirected to homepage)
+    - Navbar Shows Orders and Carts only when Logged in
+- #### Unit (Manually Written)
+    - Admin Controller Test
+      ✓ account
+      ✓ deleteaccount
+      ✓ foodmenu
+      ✓ addfoodpage
+      ✓ uploadfood
+      ✓ editfoodpage
+      ✓ admincart
+      ✓ activeorderpage
+      ✓ editfood
+      ✓ deletefood
+      ✓ changestatusorder
+    - Home Controller Test
+      ✓ index
+      ✓ redirectslogin
+      ✓ addtocart
+      ✓ orderconfirm
+      ✓ showcart
+      ✓ showmenu
+      ✓ removefromcart
+      ✓ showorderpage
+    - Web Test
+      ✓ index
+      ✓ redirectslogin
+      ✓ account
+      ✓ deleteaccount
+      ✓ foodmenu
+      ✓ addfoodpage
+      ✓ uploadfood
+      ✓ deletefood
+      ✓ editfoodpage
+      ✓ editfood
+      ✓ activeorderpage
+      ✓ admincart
+      ✓ changestatusorder
+      ✓ addtocart
+      ✓ showcart
+      ✓ showorderpage
+      ✓ removefromcart
+      ✓ orderconfirm
+      ✓ showmenu
+      ✓ dashboard
+
 ### License
 
 Please use for education purposes only. It is alright to take inspirations, but please do not use the exact software for your projects/assignments. <br> <br> © Copyright Ahmad Al Asad
