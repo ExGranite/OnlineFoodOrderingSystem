@@ -129,11 +129,12 @@ Snippets from the templates have been used, and modified using css, javascript a
       <br>✓ current password must be correct
       <br>✓ new passwords must match
 
-### Versions:
+### Commit Versions:
  - OFOS 1.0: Original Commit
  - OFOS 1.1: Changes Made After Unit Testing
  - OFOS 1.2: Deleted Redundant Code FIles
- - DATABASE BACKUP 1.0: Database Backup File `ofos.sql`
+ - TEST 1.1: Manual Unit Tests Added (Other Than Laravel Provided Tests)
+ - DATABASE BACKUP 1.0: Database Backup File `ofos.sql` Added
 
 ### License
 
