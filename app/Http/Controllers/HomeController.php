@@ -49,18 +49,15 @@ class HomeController extends Controller
 
     public function addtocart(Request $request, $id) {
         $data = menu::all();
-        // $id = Auth::id();
         if (Auth::id()) {
             $userid = Auth::id();
             $carta = cart::where('foodid', '=', $id)->where('userid', '=', $userid)->count();
             if ($carta == 0) {
                 $foodid = $id;
                 $quantity = $request->quantity;
-                
                 $food = menu::find($id);
                 $price = $food->price;
                 $totalprice = $price * $quantity;
-
                 $cart = new cart;
                 $cart->userid = $userid;
                 $cart->foodid = $foodid;
@@ -72,38 +69,28 @@ class HomeController extends Controller
                 $cart = cart::where('foodid', '=', $id)->where('userid', '=', $userid)->get()[0];
                 $foodid = $id;
                 $quantity = $request->quantity;
-                
                 $food = menu::find($id);
                 $price = $food->price;
                 $totalprice = $price * $quantity;
-
                 $cart->quantity = $cart->quantity + $quantity;
                 $cart->totalprice = $cart->totalprice + $totalprice;
                 $cart->save();
             }
-            
-
             $data = menu::all();
             $userid = Auth::id();
             $count = cart::where('userid', $userid)->count();
-
             $datacart = cart::where('userid', $userid)->join('menus', 'carts.foodid', '=', 'menus.id')->get();
-
             return view('/showcart', compact('data', 'count', 'datacart', 'userid'));
-
-            // return view('showcart');
         } else {
             return redirect('/login');
         }
     }
 
-    public function showcart(Request $request, $id) {
+    public function showcart($id) {
         $data = menu::all();
         $userid = Auth::id();
         $count = cart::where('userid', $userid)->count();
-
         $datacart = cart::where('userid', $id)->join('menus', 'carts.foodid', '=', 'menus.id')->get();
-
         return view('/showcart', compact('data', 'count', 'datacart', 'userid'));
     }
 
@@ -116,7 +103,6 @@ class HomeController extends Controller
 
     public function removefromcart($id, $userid) {
         $data = cart::where('foodid', '=', $id)->where('userid', '=', $userid)->delete();
-
         return redirect()->back();
     }
 
@@ -151,17 +137,14 @@ class HomeController extends Controller
         $flag = 1;
         $c = order::where('userid', $id)->count();
         $dataorder = order::where('userid', $id)->orderBy('id', 'desc')->get();
-
         return view('/showorderpage', compact('data', 'count', 'userid', 'dataorder', 'flag', 'c'));
     }
-    public function showorderpage(Request $request, $id) {
+    public function showorderpage($id) {
         $userid = Auth::id();
-        // $data = user::where('id', $id);
         $count = cart::where('userid', $userid)->count();
         $flag = 0;
         $c = order::where('userid', $id)->count();
         $dataorder = order::where('userid', $id)->orderBy('id', 'desc')->get();
-
         return view('/showorderpage', compact('count', 'userid', 'dataorder', 'flag', 'c'));
     }
 }

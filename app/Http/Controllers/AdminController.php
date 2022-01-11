@@ -33,7 +33,6 @@ class AdminController extends Controller
 
     public function foodmenu() {
         $data = menu::all()->sortBy('category');
-        // $data2 = category::all();
         return view("admin.foodmenu", compact("data"));
     }
 
@@ -45,26 +44,22 @@ class AdminController extends Controller
     public function uploadfood(Request $request) {
         $data = new menu;
         $image = $request->image;
-        $imagename=time().'.'.$image->getClientOriginalExtension();
-        $request->image->move('foodimage', $imagename);
-        $data->image=$imagename;
+        if ($image != NULL) {
+            $imagename=time().'.'.$image->getClientOriginalExtension();
+            $request->image->move('foodimage', $imagename);
+            $data->image=$imagename;
+        }
         $data->title=$request->title;
         $data->price=$request->price;
         $data->description=$request->description;
-        
         $data->category=$request->category;
         $data->save();
-
         $data2 = new category;
         $data2->category=$request->category;
         $data2->foodid=$data->id;
         $data2->save();
-        
-        $data = menu::all();
-        // $data2 = category::all();
+        $data = menu::all()->sortBy('category');
         return view("admin.foodmenu", compact("data"));
-
-        // return redirect()->back();
     }
 
     public function deletefood($id) {
@@ -75,8 +70,6 @@ class AdminController extends Controller
     
     public function editfoodpage($id) {
         $data = menu::find($id);
-        // $foodid = $data->$id;
-        // $data2 = category::find($foodid);
         return view("admin.editfoodpage", compact("data"));
     }
 
@@ -93,16 +86,12 @@ class AdminController extends Controller
         $data->description=$request->description;
         $data->category=$request->category;
         $data->save();
-
         $data2 = new category;
         $data2->category=$request->category;
         $data2->foodid=$data->id;
         $data2->save();
-
         $data = menu::all()->sortBy('category');
-        // $data2 = category::all();
         return view("admin.foodmenu", compact("data"));
-        // return redirect()->back();
     }
 
     public function admincart() {
