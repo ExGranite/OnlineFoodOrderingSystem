@@ -62,17 +62,17 @@ Snippets from the templates have been used, and modified using css, javascript a
     - Navbar Shows Orders and Carts only when Logged in
 - #### Unit (Manually Written)
     - Admin Controller Test
-      ✓ account
-      ✓ deleteaccount
-      ✓ foodmenu
-      ✓ addfoodpage
-      ✓ uploadfood
-      ✓ editfoodpage
-      ✓ admincart
-      ✓ activeorderpage
-      ✓ editfood
-      ✓ deletefood
-      ✓ changestatusorder
+      <br>✓ account
+      <br>✓ deleteaccount
+      <br>✓ foodmenu
+      <br>✓ addfoodpage
+      <br>✓ uploadfood
+      <br>✓ editfoodpage
+      <br>✓ admincart
+      <br>✓ activeorderpage
+      <br>✓ editfood
+      <br>✓ deletefood
+      <br>✓ changestatusorder
     - Home Controller Test
       ✓ index
       ✓ redirectslogin
