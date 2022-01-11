@@ -29,21 +29,25 @@ class HomeController extends Controller
 
     public function redirectslogin() {
         $data = menu::all();
-        $type = Auth::user()->usertype;
-        if ($type=='1') {
-            $ucount = User::all()->count();
-            $mcount = Menu::all()->count();
-            $ccount = Cart::all()->count();
-            $aocount = Order::where('status', '0')->count();
-            $cocount = Order::where('status', '1')->count();
-            return view('admin.admindashboard', compact('ucount', 'mcount', 'ccount', 'aocount', 'cocount'));
+        if (Auth::user()) {
+            $type = Auth::user()->usertype;
+            if ($type=='1') {
+                $ucount = User::all()->count();
+                $mcount = Menu::all()->count();
+                $ccount = Cart::all()->count();
+                $aocount = Order::where('status', '0')->count();
+                $cocount = Order::where('status', '1')->count();
+                return view('admin.admindashboard', compact('ucount', 'mcount', 'ccount', 'aocount', 'cocount'));
+            } else {
+                $userid = Auth::id();
+                $dataB = menu::where('category', 'Breakfast')->inRandomOrder()->limit(6)->get();
+                $dataL = menu::where('category', 'Lunch')->inRandomOrder()->limit(6)->get();
+                $dataD = menu::where('category', 'Dinner')->inRandomOrder()->limit(6)->get();
+                $count = cart::where('userid', $userid)->count();
+                return view("home", compact("dataB", "dataL", "dataD", "count"));
+            }
         } else {
-            $userid = Auth::id();
-            $dataB = menu::where('category', 'Breakfast')->inRandomOrder()->limit(6)->get();
-            $dataL = menu::where('category', 'Lunch')->inRandomOrder()->limit(6)->get();
-            $dataD = menu::where('category', 'Dinner')->inRandomOrder()->limit(6)->get();
-            $count = cart::where('userid', $userid)->count();
-            return view("home", compact("dataB", "dataL", "dataD", "count"));
+            return redirect('/login');
         }
     }
 
