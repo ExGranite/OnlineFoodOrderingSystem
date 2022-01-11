@@ -129,6 +129,12 @@ Snippets from the templates have been used, and modified using css, javascript a
       <br>✓ current password must be correct
       <br>✓ new passwords must match
 
+### Versions:
+ - OFOS 1.0: Original Commit
+ - OFOS 1.1: Changes Made After Unit Testing
+ - OFOS 1.2: Deleted Redundant Code FIles
+ - DATABASE BACKUP 1.0: Database Backup File `ofos.sql`
+
 ### License
 
 Please use for education purposes only. It is alright to take inspirations, but please do not use the exact software for your projects/assignments. <br> <br> © Copyright Ahmad Al Asad
