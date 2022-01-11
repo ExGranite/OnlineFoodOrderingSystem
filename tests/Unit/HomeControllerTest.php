@@ -20,12 +20,31 @@ class HomeControllerTest extends TestCase {
         $response = $this->data->index();
         $this->assertTrue(true);
     }
+
+    public function test_redirectslogin() {
+        $this->data = new HomeController;
+        $response = $this->data->redirectslogin();
+        $this->assertTrue(true);
+    }
     
     public function test_addtocart() {
         $this->data = new HomeController;
         $request = new Request(['quantity' => '10',]);
         $d = menu::where('category', 'Breakfast')->inRandomOrder()->limit(1)->get();
         $response = $this->data->addtocart($request, $d[0]->id);
+        $this->assertTrue(true);
+    }
+
+    public function test_orderconfirm() {
+        $this->data = new HomeController;
+        $request = new Request(['quantity' => '10',
+                    'fname' => 'First', 'lname' => 'Last',
+                    'card' => '1111 1111 1111 1111', 'data' => '11/11/1111', 'ccv' => '111',
+                    'address' => 'Address', 'city' => 'City', 'zip' => '1111',
+                    'email' => 'example@example.com', 'foodname' => [], 'price' => [],
+                    ]);
+        $d = user::where('usertype', '0')->inRandomOrder()->limit(1)->get();
+        $response = $this->data->orderconfirm($request, $d[0]->id);
         $this->assertTrue(true);
     }
 

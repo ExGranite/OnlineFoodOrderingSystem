@@ -12,7 +12,7 @@ class WebTest extends TestCase {
     
     public function test_redirectslogin() {
         $response = $this->get('/redirectslogin');
-        $response->assertStatus(500);
+        $response->assertStatus(302);
     }
 
     public function test_account() {
