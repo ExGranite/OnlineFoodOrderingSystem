@@ -52,14 +52,6 @@ Snippets from the templates have been used, and modified using css, javascript a
 
 ### Tests:
 
-- #### Feature (Provided by Laravel)
-    - View Home Page
-      - Home Page Shows 6 Randomized Food Items (per Category) from the Database as Specials
-    - View Menu
-    - Login (Admin account is redirected to Admin Dashboard || User account is redirected to homepage)
-    - Register
-    - Logout (Redirected to homepage)
-    - Navbar Shows Orders and Carts only when Logged in
 - #### Unit (Manually Written)
     - Admin Controller Test
       <br>✓ account
@@ -74,35 +66,68 @@ Snippets from the templates have been used, and modified using css, javascript a
       <br>✓ deletefood
       <br>✓ changestatusorder
     - Home Controller Test
-      ✓ index
-      ✓ redirectslogin
-      ✓ addtocart
-      ✓ orderconfirm
-      ✓ showcart
-      ✓ showmenu
-      ✓ removefromcart
-      ✓ showorderpage
+      <br>✓ index
+      <br>✓ redirectslogin
+      <br>✓ addtocart
+      <br>✓ orderconfirm
+      <br>✓ showcart
+      <br>✓ showmenu
+      <br>✓ removefromcart
+      <br>✓ showorderpage
     - Web Test
-      ✓ index
-      ✓ redirectslogin
-      ✓ account
-      ✓ deleteaccount
-      ✓ foodmenu
-      ✓ addfoodpage
-      ✓ uploadfood
-      ✓ deletefood
-      ✓ editfoodpage
-      ✓ editfood
-      ✓ activeorderpage
-      ✓ admincart
-      ✓ changestatusorder
-      ✓ addtocart
-      ✓ showcart
-      ✓ showorderpage
-      ✓ removefromcart
-      ✓ orderconfirm
-      ✓ showmenu
-      ✓ dashboard
+      <br>✓ index
+      <br>✓ redirectslogin
+      <br>✓ account
+      <br>✓ deleteaccount
+      <br>✓ foodmenu
+      <br>✓ addfoodpage
+      <br>✓ uploadfood
+      <br>✓ deletefood
+      <br>✓ editfoodpage
+      <br>✓ editfood
+      <br>✓ activeorderpage
+      <br>✓ admincart
+      <br>✓ changestatusorder
+      <br>✓ addtocart
+      <br>✓ showcart
+      <br>✓ showorderpage
+      <br>✓ removefromcart
+      <br>✓ orderconfirm
+      <br>✓ showmenu
+      <br>✓ dashboard
+- #### Feature (Provided by Laravel)
+    - Authentication Test
+      <br>✓ login screen can be rendered
+      <br>✓ users can authenticate using the login screen
+      <br>✓ users can not authenticate with invalid password
+    - Browser Sessions Test
+      <br>✓ other browser sessions can be logged out
+    - Delete Account Test
+      <br>✓ user accounts can be deleted
+      <br>✓ correct password must be provided before account can be deleted
+    - Password Confirmation Test
+      <br>✓ confirm password screen can be rendered
+      <br>✓ password can be confirmed
+      <br>✓ password is not confirmed with invalid password
+    - Password Reset Test
+      <br>✓ reset password link screen can be rendered
+      <br>✓ reset password link can be requested
+      <br>✓ reset password screen can be rendered
+      <br>✓ password can be reset with valid token
+    - Profile Information Test
+      <br>✓ current profile information is available
+      <br>✓ profile information can be updated
+    - Registration Test
+      <br>✓ registration screen can be rendered
+      <br>✓ new users can register
+    - Two Factor Authentication Settings Test
+      <br>✓ two factor authentication can be enabled
+      <br>✓ recovery codes can be regenerated
+      <br>✓ two factor authentication can be disabled
+    - Update Password Test
+      <br>✓ password can be updated
+      <br>✓ current password must be correct
+      <br>✓ new passwords must match
 
 ### License
 
